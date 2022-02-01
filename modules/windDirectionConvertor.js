@@ -1,4 +1,4 @@
-export function windDirectionConvertor(dailyData) {
+export default function windDirectionConvertor(dailyData) {
     let deg = Math.floor(dailyData.wind_deg);
     switch (true) {
         case deg >= 360 && deg <= 21:
