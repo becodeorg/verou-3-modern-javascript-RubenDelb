@@ -1,10 +1,10 @@
-import Data from "./modules/config.js";
+import Data from "../modules/config.js";
 import {
     createCurrentCard, createDailyCards 
-} from "./modules/createCards.js";
+} from "./createCards.js";
 import {
     createFirstChart, createSecondChart, createRainChart
-} from "./modules/createCharts.js";
+} from "./createCharts.js";
 
 const currentWeatherWrapper = document.getElementById("currentWeatherWrapper");
 const carouselInner = document.getElementById("carouselInner");

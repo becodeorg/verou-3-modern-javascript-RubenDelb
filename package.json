@@ -1,0 +1,26 @@
+{
+  "name": "modern-javascript-application",
+  "version": "1.0.0",
+  "description": "- Repository: `modern-javascript-application` - Type of Challenge: `learning` - Duration: `3-5 days` - Deployment strategy: `Github pages` - Team challenge : `solo`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/becodeorg/verou-3-modern-javascript-RubenDelb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/becodeorg/verou-3-modern-javascript-RubenDelb/issues"
+  },
+  "homepage": "https://github.com/becodeorg/verou-3-modern-javascript-RubenDelb#readme",
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "webpack": "^5.68.0"
+  }
+}
