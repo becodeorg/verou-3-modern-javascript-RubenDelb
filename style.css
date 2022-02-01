@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-image: url(/images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  padding: 20px 0;
+  background-color: rgba(24, 24, 24, 0.5);
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 900;
+  color: #faf5e3;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #searchBar {
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 10px 0 0 10px;
+  font-size: 16px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+header #submitBtn {
+  margin-left: -1px;
+  background: rgba(255, 255, 255, 0.5);
+  height: 44px;
+  padding: 5px;
+  border: 2px solid;
+  border-radius: 0 10px 10px 0;
+}
+
+header #submitBtn .searchIcon {
+  width: 30px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Slideshow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Slideshow .card {
+  color: #161414;
+  width: 100vw;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 240, 0.7);
+}
+
+.Slideshow .card .displayDay {
+  text-align: center;
+  padding: 5px;
+}
+
+.Slideshow .card .weatherImgDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Slideshow .card .weatherImgDiv .windDiv {
+  all: inherit;
+  padding: 0px 20px;
+}
+
+.Slideshow .card .weatherImgDiv .windDiv .windIcon {
+  margin: 0px 20px;
+  width: 30px;
+}
+
+.Slideshow .card .weatherImgDiv .windDiv .windSpeed {
+  font-style: italic;
+}
+
+.Slideshow .card .weatherInfoDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Slideshow .card .weatherInfoDiv .temperatureDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.Slideshow .card .weatherInfoDiv .weatherDescription {
+  font-style: italic;
+}
+
+.currentWeatherCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-self: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 20px;
+  background-color: rgba(248, 248, 240, 0.9);
+  padding: 15px;
+  border-radius: 15px;
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.currentWeatherCard .currentTitle {
+  font-weight: 900;
+}
+
+.currentWeatherCard .currentInfoDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.currentWeatherCard .currentInfoDiv .iconCurrent {
+  width: 130px;
+}
+
+.currentWeatherCard .currentInfoDiv .currentWindDiv .currentWindIcon {
+  width: 30px;
+}
+
+.currentWeatherCard .currentInfoDiv .currentWindDiv .currentWindSpeed {
+  margin-top: 10px;
+}
+
+.charts {
+  display: none;
+}
+
+#firstChart,
+#secondChart,
+#rainChart {
+  background-color: rgba(248, 240, 240, 0.9);
+  width: 90vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  color: #a8c2db;
+}
+
+@media only screen and (min-width: 1024px) {
+  .weatherDescription {
+    font-size: 22px;
+  }
+  .currentWeatherCard {
+    width: 40vw;
+  }
+  .secondMainPart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #firstChart {
+    width: 40vw;
+  }
+  #secondChart {
+    margin-right: 2.5vw;
+    width: 40vw;
+  }
+  #rainChart {
+    margin-left: 2.5vw;
+    width: 40vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
