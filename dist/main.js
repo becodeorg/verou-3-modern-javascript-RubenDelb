@@ -1,22 +1,13 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./modules/config.js":
 /*!***************************!*\
   !*** ./modules/config.js ***!
   \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-var Data = {
-  key: 'c2a8355a1f5b4c7f1f722fb4ec6e7c0f',
-  UNSPLASH_API_KEY: "4avo3C4_Jw1jULeK83Tn4kuRkut5O7TCKE_ZXBRgMGc"
-};
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Data);
+
 
 /***/ }),
 
@@ -26,6 +17,7 @@ var Data = {
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createCurrentCard": () => (/* binding */ createCurrentCard),
@@ -114,6 +106,7 @@ var createDailyCards = function createDailyCards(result) {
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "createFirstChart": () => (/* binding */ createFirstChart),
@@ -281,6 +274,7 @@ var createRainChart = function createRainChart(result) {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ windDirectionConvertor)
@@ -389,6 +383,18 @@ function windDirectionConvertor(dailyData) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -419,13 +425,15 @@ function windDirectionConvertor(dailyData) {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
+"use strict";
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_config_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/config.js */ "./modules/config.js");
+/* harmony import */ var _modules_config_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_config_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _createCards_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./createCards.js */ "./src/createCards.js");
 /* harmony import */ var _createCharts_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./createCharts.js */ "./src/createCharts.js");
 
@@ -460,7 +468,7 @@ var displayAlert = function displayAlert() {
 };
 
 var getPictureOfCity = function getPictureOfCity(searchInput) {
-  fetch("https://api.unsplash.com/search/photos?query=" + searchInput + "&client_id=" + _modules_config_js__WEBPACK_IMPORTED_MODULE_0__["default"].UNSPLASH_API_KEY).then(function (response) {
+  fetch("https://api.unsplash.com/search/photos?query=" + searchInput + "&client_id=" + (_modules_config_js__WEBPACK_IMPORTED_MODULE_0___default().UNSPLASH_API_KEY)).then(function (response) {
     return response.json();
   }).then(function (unsplashData) {
     console.log(unsplashData);
@@ -477,14 +485,14 @@ submitBtn.addEventListener("click", function () {
 
   currentWeatherWrapper.innerHTML = ""; //Make sure the previous searchresults will disappear
 
-  fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + searchInput + '&appid=' + _modules_config_js__WEBPACK_IMPORTED_MODULE_0__["default"].key).then(function (response) {
+  fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + searchInput + '&appid=' + (_modules_config_js__WEBPACK_IMPORTED_MODULE_0___default().key)).then(function (response) {
     return response.json();
   }).then(function (data) {
     var lat = data.city.coord.lat; //catch the latitude of the city that the user has typed
 
     var _long = data.city.coord.lon; //catch the longitude of the city that the user has typed
 
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + _long + '&exclude=minutely&units=metric&appid=' + _modules_config_js__WEBPACK_IMPORTED_MODULE_0__["default"].key).then(function (response) {
+    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + _long + '&exclude=minutely&units=metric&appid=' + (_modules_config_js__WEBPACK_IMPORTED_MODULE_0___default().key)).then(function (response) {
       return response.json();
     }).then(createEverything).then(getPictureOfCity(searchInput));
   })["catch"](displayAlert);
