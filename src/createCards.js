@@ -7,6 +7,7 @@ const createElement = (element, className, parent) => {
     return newElement;
 }
 
+console.log("Hello from createCards Line 10!");
 export const createCurrentCard = (result) => {
     const currentWeatherWrapper = document.getElementById("currentWeatherWrapper");
     const currentResult = result.current;
