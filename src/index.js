@@ -1,4 +1,4 @@
-import Data from "../modules/config.js";
+import Data from "./config.js";
 import {
     createCurrentCard, createDailyCards 
 } from "./createCards.js";
