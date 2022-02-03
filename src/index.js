@@ -5,6 +5,7 @@ import {
 import {
     createFirstChart, createSecondChart, createRainChart
 } from "./createCharts.js";
+import "./style.scss";
 
 const currentWeatherWrapper = document.getElementById("currentWeatherWrapper");
 const carouselInner = document.getElementById("carouselInner");
