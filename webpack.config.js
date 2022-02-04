@@ -1,5 +1,5 @@
 module.exports = {
-    // mode: 'development',
+    mode: 'development',
     module: {
         rules: [{
                 test: /\.js$/,
@@ -23,5 +23,5 @@ module.exports = {
         ]
     },
 
-    devtool: 'source-map'
-}
+    devtool: "source-map"
+};

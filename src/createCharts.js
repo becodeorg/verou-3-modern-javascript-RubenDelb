@@ -4,11 +4,11 @@ const destroyOldChart = (chart) => {
     if (chart != null) {
         chart.destroy();
     }
-}
+};
 
 const msToBeaufort = (ms) => {
     return Math.ceil(Math.cbrt(Math.pow(ms / 0.836, 2)));
-}
+};
 
 const getEveryHour = (result) => {
     const labels = [];
@@ -18,10 +18,10 @@ const getEveryHour = (result) => {
         labels.push(localHour); //push every created hour inside the "labels"-array.
     }
     return labels;
-}
+};
 
 export const createFirstChart = (result) => {
-    destroyOldChart(myFirstChart)
+    destroyOldChart(myFirstChart);
     const labels = getEveryHour(result);
     let temperatureData = [];
     let feelTemperatureData = [];
@@ -34,17 +34,17 @@ export const createFirstChart = (result) => {
     const data = {
         labels: labels,
         datasets: [{
-            label: 'Actual Temperature',
-            borderColor: 'rgb(255, 99, 132)',
+            label: "Actual Temperature",
+            borderColor: "rgb(255, 99, 132)",
             data: temperatureData,
         }, {
-            label: 'Feels-like Temperature',
+            label: "Feels-like Temperature",
             data: feelTemperatureData,
-            borderColor: 'rgb(44, 116, 150)',
+            borderColor: "rgb(44, 116, 150)",
         }]
     };
     const config = {
-        type: 'line',
+        type: "line",
         data: data,
         options: {
             scales: {
@@ -54,14 +54,15 @@ export const createFirstChart = (result) => {
             }
         }
     };
+    // eslint-disable-next-line no-undef
     myFirstChart = new Chart(
-        document.getElementById('myFirstChart'),
+        document.getElementById("myFirstChart"),
         config
     );
-}
+};
 
 export const createSecondChart = (result) => {
-    destroyOldChart(mySecondChart)
+    destroyOldChart(mySecondChart);
     const labels = getEveryHour(result);
     let windSpeedData = [];
     let windGustsData = [];
@@ -74,17 +75,17 @@ export const createSecondChart = (result) => {
     const data = {
         labels: labels,
         datasets: [{
-            label: 'Windspeed in bft',
+            label: "Windspeed in bft",
             data: windSpeedData,
-            borderColor: 'rgb(255, 99, 132)',
+            borderColor: "rgb(255, 99, 132)",
         }, {
-            label: 'Windgusts in bft',
+            label: "Windgusts in bft",
             data: windGustsData,
-            borderColor: 'rgb(44, 116, 150)',
+            borderColor: "rgb(44, 116, 150)",
         }]
     };
     const config = {
-        type: 'line',
+        type: "line",
         data: data,
         options: {
             scales: {
@@ -94,11 +95,12 @@ export const createSecondChart = (result) => {
             }
         }
     };
+    // eslint-disable-next-line no-undef
     mySecondChart = new Chart(
-        document.getElementById('mySecondChart'),
+        document.getElementById("mySecondChart"),
         config
     );
-}
+};
 
 const pushDataToArray = (hourlyPrecipitation, array) => {
     if (typeof hourlyPrecipitation != "undefined") { //the data exists
@@ -106,35 +108,35 @@ const pushDataToArray = (hourlyPrecipitation, array) => {
     } else { // the data does not exist in the openweathermap-data
         array.push(0);
     }
-}
+};
 
 export const createRainChart = (result) => {
-    destroyOldChart(myRainChart)
+    destroyOldChart(myRainChart);
     const labels = getEveryHour(result);
     let rainData = [];
     let snowData = [];
     for (let i = 0; i < 24; i++) {
-        pushDataToArray(result.hourly[i].rain, rainData)
-        pushDataToArray(result.hourly[i].snow, snowData)
+        pushDataToArray(result.hourly[i].rain, rainData);
+        pushDataToArray(result.hourly[i].snow, snowData);
     }
     const data = {
         labels: labels,
         datasets: [{
-                label: 'Rain in mm',
-                backgroundColor: 'rgb(49, 135, 216)',
-                borderColor: 'rgb(255, 99, 132)',
+                label: "Rain in mm",
+                backgroundColor: "rgb(49, 135, 216)",
+                borderColor: "rgb(255, 99, 132)",
                 data: rainData,
             },
             {
-                label: 'Snow in mm',
-                backgroundColor: 'rgb(168, 194, 219)',
-                borderColor: 'rgb(255, 99, 132)',
+                label: "Snow in mm",
+                backgroundColor: "rgb(168, 194, 219)",
+                borderColor: "rgb(255, 99, 132)",
                 data: snowData,
             }
         ]
     };
     const config = {
-        type: 'bar',
+        type: "bar",
         data: data,
         options: {
             scales: {
@@ -144,8 +146,9 @@ export const createRainChart = (result) => {
             }
         }
     };
+    // eslint-disable-next-line no-undef
     myRainChart = new Chart(
-        document.getElementById('myRainChart'),
+        document.getElementById("myRainChart"),
         config
     );
-}
+};
