@@ -21,11 +21,11 @@ At the end of this challenge you will:
 
 > It's Monday morning. I sit at my desk, start the computer, and my two screens light up.
 >
-> I open up my text editor and open the terminal at same level as your project folder in the first screen. 
+> I open up my text editor and open the terminal at same level as your project folder in the first screen.
 >
->I type two simple words in the terminal: `npm start` and press <kbd>ENTER</kbd>. 
+> I type two simple words in the terminal: `npm start` and press <kbd>ENTER</kbd>.
 >
->A few seconds later a browser tab launches in the second screen with a local server where I can see the application as I develop it.
+> A few seconds later a browser tab launches in the second screen with a local server where I can see the application as I develop it.
 >
 > I need to add a small new feature. I already have the code in my head, and start typing it out. Before I even save, a red squiggly line under a piece of recent code alerts me that there is a problem, and suggests a fix. I accept the fix, which is automatically applied to my code. Phew, that would have taken 30 minutes of my time to find and fix manually.
 >
@@ -40,7 +40,6 @@ At the end of this challenge you will:
 > I type `npm build` in the terminal and all my SASS and JS is bundled, optimized and minified, ready to ship to the browser with optimal performance. Development never felt better.
 
 If you also find this vision of a happy future enticing read on, and reach coding Nirvana in 5 days 😎
-
 
 ## Instructions
 
